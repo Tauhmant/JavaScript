@@ -1,0 +1,54 @@
+<html lang=""pl-PL>
+<head>
+<style>
+h1{
+    color: red;
+    text-align: center;
+    }
+    .button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+</style>
+<title>Larin 2P</title>
+<script language="JavaScript">
+function WinOpen_g1_larin()
+{
+window.open("z5_grafika1_lar.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=400,width=450,top=500,left=550");
+}
+function WinOpen_g2_larin()
+{
+window.open("z5_grafika2_lar.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=300,width=350,top=500,left=750");
+}
+function WinOpen_g3_larin()
+{
+window.open("z5_grafika3_lar.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=570,width=300,top=500,left=950");
+}
+function WinOpen_g4_larin()
+{
+window.open("z5_grafika4_lar.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=400,width=510,top=500,left=1150");
+}
+function okno_zamknij_larin()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<h1>Wykonal: Ivan Larin mój numer w dzienniku 17, czyli mam uklad [(17) mod 4=1] uklad 1</h1>
+<form>
+<div class="button-container" >
+    <input type="button_g1" name="grafika1" value="grafika1" onclick="WinOpen_g1_larin()">
+    <input type="button_g2" name="grafika2" value="grafika2" onclick="WinOpen_g2_larin()">
+    <input type="button_g3" name="grafika3" value="grafika3" onclick="WinOpen_g3_larin()">
+    <input type="button_g4" name="grafika4" value="grafika4" onclick="WinOpen_g4_larin()">
+    </div> <br><br><br><br><br><br>
+    <div class="button-container" >
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</div>
+</form>
+</body>
+</html>
