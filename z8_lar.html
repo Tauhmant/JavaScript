@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<title>Larin-Zadanie8</title>
+<script type="text/javascript"> 
+function show_confirm()
+{
+	var r=confirm("Naciśnij klawisz");
+	if (r==true)
+		{
+		document.write("Nacisnąłeś OK! <br>"); 
+		document.write('<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>'); 
+		}
+	else
+		{ 
+		document.write("Nacisnąłeś Cancel! <br>");
+		document.write('<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>'); 
+		}
+}
+function okno_zamknij_larin()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<h3>Zastosowanie:</h1>
+<p>Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych.<br>
+Użytkownik musi nacisnąć „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia.<br>
+Jeżeli zostanie wybrane „OK.” metoda zwraca true w przeciwnym wypadku false.<br>
+Użytkownik musi nacisnąć ok. aby potwierdził jej przeczytanie. </p>
+<input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+<br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>
