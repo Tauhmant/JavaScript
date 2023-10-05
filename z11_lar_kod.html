@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+ <html> 
+ <head> 
+ <script type="text/javascript"> 
+  function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+ </script> 
+ </head> 
+<body> 
+<div style="color:green;font-size:37px;">
+ <script language="JavaScript">
+    function WinOpen_larin() 
+ {
+ window.open("z11_lar_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+var D1_lar=prompt("D1=","");
+var D2_lar=prompt("D2=","");
+var roznica;
+var a=parseFloat(D1_lar);
+var b=parseFloat(D2_lar);
+  if (D1_lar>=D2_lar) 
+ { 
+ roznica=D1_lar-D2_lar;
+ roznica=roznica*86400; 
+ } 
+  if (D1_lar<=D2_lar) 
+ { 
+ roznica=D1_lar-D2_lar;
+ roznica=roznica*86400; 
+ } 
+ document.write("D1="+a+" <br> "+" D2= "+b+" <br> "+" ilosc sekund= " +roznica+ " sekund" + "<br>");
+ </script>
+</div>
+  <input type="button" name="kod" value="zad 11 kod" onclick="WinOpen_larin()">
+</body> 
+</html>
+ </textarea>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>
