@@ -16,22 +16,22 @@
                 var G1_lar = prompt("G1=", "");
                 var D2_lar = prompt("D2=", "");
                 var G2_lar = prompt("G2=", "");
-                var roznicaD;
-                var roznicaG;
-                var a = parseFloat(D1_lar);
-                var b = parseFloat(G1_lar);
-                var c = parseFloat(D2_lar);
-                var d = parseFloat(G2_lar);
+                var roznicaD_lar;
+                var roznicaG_lar;
+                var a_lar = parseFloat(D1_lar);
+                var b_lar = parseFloat(G1_lar);
+                var c_lar = parseFloat(D2_lar);
+                var d_lar = parseFloat(G2_lar);
                 if (D1_lar >= D2_lar && G1_lar >= G2_lar) {
-                    roznicaD = D1_lar - D2_lar;
-                    roznicaD = roznicaD * 86400;
+                    roznicaD_lar = D1_lar - D2_lar;
+                    roznicaD_lar = roznicaD_lar * 86400;
 
-                    roznicaG = G1_lar - G2_lar;
-                    roznicaG = roznicaG * 3600;
+                    roznicaG_lar = G1_lar - G2_lar;
+                    roznicaG_lar = roznicaG_lar * 3600;
                 }
-                var roznicaN;
-                roznicaN = roznicaD + roznicaG;
-                document.write("D1=" + a + " <br> " + " G1=" + b + "<br>" + "D2=" + c + " <br>" + " G2= " + d + " <br> " + " ilosc sekund= " + roznican + " sekund" + "<br>");
+                var roznicaN_lar;
+                roznicaN_lar = roznicaD_lar + roznicaG_lar;
+                document.write("D1=" + a_lar + " <br> " + " G1=" + b_lar + "<br>" + "D2=" + c_lar + " <br>" + " G2= " + d_lar + " <br> " + " ilosc sekund= " + roznicaN_lar + " sekund" + "<br>");
             </script>
         </div>
         <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />

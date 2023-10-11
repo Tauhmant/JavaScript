@@ -18,45 +18,45 @@
     <body bgcolor="silver">
         <textarea disabled readonly>
             <html>
-                <head>
-                    <script type="text/javascript">
-                        function okno_zamknij_larin() {
-                            window.close()
-                        }
-                    </script>
-                </head>
-                <body>
-                    <div style="color:navy;font-size:30px;">
-                        <script language="JavaScript">
-                            function WinOpen_larin() {
-                                window.open("z16_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
-                            }
-                            var a = prompt("Podaj pierwsza liczbe A= ", "");
-                            var b = prompt("Podaj druga liczbe B =", "");
+    <head>
+        <script type="text/javascript">
+            function okno_zamknij_larin() {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <div style="color:navy;font-size:30px;">
+            <script language="JavaScript">
+                function WinOpen_larin() {
+                    window.open("z16_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+                }
+                var a_lar = prompt("Podaj pierwsza liczbe A= ", "");
+                var b_lar = prompt("Podaj druga liczbe B =", "");
 
-                            var potegowanie;
-                            var dodawanie;
-                            var dodawanie2;
+                var potegowanie_lar;
+                var dodawanie_lar;
+                var Dodawanie_lar;
 
-                            var mnozenie;
-                            var result;
+                var mnozenie_lar;
+                var rezultat_lar;
 
-                            var a = parseFloat(a);
-                            var b = parseFloat(b);
+                var a_lar = parseFloat(a_lar);
+                var b_lar = parseFloat(b_lar);
 
-                            potengowanie = a * a * a;
-                            dodawanie = 3 * ((a * a) * b);
-                            dodawanie2 = 3 * (a) * (b * b);
-                            mnozenie = b * b * b;
+                potengowanie_lar = a_lar * a_lar * a_lar;
+                dodawanie_lar = 3 * ((a_lar * a_lar) * b_lar);
+                Dodawanie_lar = 3 * (a_lar) * (b_lar * b_lar);
+                mnozenie_lar = b_lar * b_lar * b_lar;
 
-                            result = (a * a * a) + 3 * ((a * a) * b) + 3 * (a) * (b * b) + b * b * b;
-                            document.write("Wczytane liczby:		A= " + a + "	B=" + b + " <br> " + "( " + a + " + " + b + " )^3 = " + a + "^3  + " + " 3*(( " + a + " ^2)* " + b + " ) +  3*( " + a + " )*(( " + b + " )^2  + " + b + " ^3 = " + potengowanie + " + " + dodawanie + " + " + dodawanie2 + " + " + mnozenie + " = " + result + " <br>");
-                        </script>
-                    </div>
-                    <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
-                    <input type="button" name="kod" value="zad 16 kod" onclick="WinOpen_larin()">
-                </body>
-            </html>
+                rezultat_lar = (a_lar* a_lar * a_lar) + 3 * ((a_lar * a_lar) * b_lar) + 3 * (a_lar) * (b_lar * b_lar) + b_lar * b_lar * b_lar;
+                document.write("Wczytane liczby:		A= " + a_lar + "	B=" + b_lar + " <br> " + "( " + a_lar + " + " + b_lar + " )^3 = " + a_lar + "^3  + " + " 3*(( " + a_lar + " ^2)* " + b_lar + " ) +  3*( " + a_lar + " )*(( " + b_lar + " )^2  + " + b_lar + " ^3 = " + potegowanie_lar + " + " + dodawanie_lar + " + " + Dodawanie_lar + " + " + mnozenie_lar + " = " + rezultat_lar + " <br>");
+            </script>
+        </div>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
+        <input type="button" name="kod" value="zad 16 kod" onclick="WinOpen_larin()">
+    </body>
+</html>
         </textarea>
         <input type="button" value="zamknij okno" onclick="okno_zamknij_larinkod()" />
     </body>

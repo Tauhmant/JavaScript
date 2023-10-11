@@ -18,36 +18,36 @@
     <body bgcolor="silver">
         <textarea disabled readonly>
             <html>
-                <head>
-                    <script type="text/javascript">
-                        function okno_zamknij_larin() {
-                            window.close()
-                        }
-                    </script>
-                </head>
-                <body>
-                    <script language="JavaScript">
-                        function WinOpen_larin() {
-                            window.open("z13_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
-                        }
-                        var m_lar = prompt("m = ", "");
+    <head>
+        <script type="text/javascript">
+            function okno_zamknij_larin() {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            function WinOpen_larin() {
+                window.open("z13_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+            }
+            var m_lar = prompt("m = ", "");
 
-                        var dodawanie;
-                        var dodawanie2;
-                        var mnozenie;
-                        var a = parseFloat(m_lar);
+            var dodawanie_lar;
+            var Dodawanie_lar;
+            var mnozenie_lar;
+            var a_lar = parseFloat(m_lar);
 
-                        if (m_lar !== null) {
-                            dodawanie = a;
-                            dodawanie2 = a + 1;
-                            mnozenie = a * (a + 1);
-                        }
-                        document.write("m = " + a + "<br> 1/" + dodawanie + " = " + " 1/" + dodawanie2 + " + " + " 1/" + mnozenie + "<br>");
-                    </script>
-                    <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
-                    <input type="button" name="kod" value="zad 13 kod" onclick="WinOpen_larin()">
-                </body>
-            </html>
+            if (m_lar !== null) {
+                dodawanie_lar = a_lar;
+                Dodawanie_lar = a_lar + 1;
+                mnozenie_lar = a_lar * (a_lar + 1);
+            }
+            document.write("m = " + a_lar + "<br> 1/" + dodawanie_lar + " = " + " 1/" + Dodawanie_lar + " + " + " 1/" + mnozenie_lar + "<br>");
+        </script>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
+        <input type="button" name="kod" value="zad 13 kod" onclick="WinOpen_larin()">
+    </body>
+</html>
         </textarea>
         <input type="button" value="zamknij okno" onclick="okno_zamknij_larinkod()" />
     </body>

@@ -17,39 +17,39 @@
     <body bgcolor="silver">
         <textarea disabled readonly>
             <html>
-                <head>
-                    <script type="text/javascript">
-                        function okno_zamknij_larin() {
-                            window.close()
-                        }
-                    </script>
-                </head>
-                <body>
-                    <script language="JavaScript">
-                        function WinOpen_larin() {
-                            window.open("z14_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
-                        }
-                        var m_lar = prompt("m = ", "");
+    <head>
+        <script type="text/javascript">
+            function okno_zamknij_larin() {
+                window.close()
+            }
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            function WinOpen_larin() {
+                window.open("z14_lar_kod.html", "problem", "toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+            }
+            var m_lar = prompt("m = ", "");
 
-                        var dodawanie;
-                        var dodawanie2;
-                        var mnozenie;
-                        var mnozenie2;
-                        var a = parseFloat(m_lar);
+            var dodawanie_lar;
+            var Dodawanie_lar;
+            var mnozenie_lar;
+            var Mnozenie_lar;
+            var a = parseFloat(m_lar);
 
-                        if (m_lar !== null) {
-                            dodawanie = a;
-                            dodawanie2 = a + 2;
-                            mnozenie = (a + 1) * (a + 2);
-                            mnozenie2 = a * (a + 1);
-                        }
+            if (m_lar !== null) {
+                dodawanie_lar = a;
+                Dodawanie_lar = a + 2;
+                mnozenie_lar = (a + 1) * (a + 2);
+                Mnozenie_lar = a * (a + 1);
+            }
 
-                        document.write("m = " + a + "<br> 1/" + dodawanie + " = " + "1/" + dodawanie2 + " + " + "1/" + mnozenie + " + " + "1/" + mnozenie2 + "<br>");
-                    </script>
-                    <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
-                    <input type="button" name="kod" value="zad 14 kod" onclick="WinOpen_larin()">
-                </body>
-            </html>
+            document.write("m = " + a + "<br> 1/" + dodawanie_lar + " = " + "1/" + Dodawanie_lar + " + " + "1/" + mnozenie_lar + " + " + "1/" + Mnozenie_lar + "<br>");
+        </script>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()" />
+        <input type="button" name="kod" value="zad 14 kod" onclick="WinOpen_larin()">
+    </body>
+</html>
         </textarea>
         <input type="button" value="zamknij okno" onclick="okno_zamknij_larinkod()" />
     </body>
