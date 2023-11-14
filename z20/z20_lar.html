@@ -1,0 +1,81 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+<script type="text/javascript">
+    function okno_zamknij_larin() {
+        window.close()
+    }
+</script>
+<body>
+  <script>
+    function AB_lar() {
+      let aX_lar = parseFloat(document.getElementById('aX').value);
+      let aY_lar = parseFloat(document.getElementById('aY').value);
+
+      let bX_lar = parseFloat(document.getElementById('bX').value);
+      let bY_lar = parseFloat(document.getElementById('bY').value);
+
+
+      document.getElementById("answer").innerHTML = "|AB|= "
+        + (Math.sqrt((aX_lar - bX_lar) ** 2 + (aY_lar - bY_lar) ** 2)).toFixed(2);
+    }
+
+    function BC_lar() {
+      let bX_lar = parseFloat(document.getElementById('bX').value);
+      let bY_lar = parseFloat(document.getElementById('bY').value);
+
+      let cX_lar = parseFloat(document.getElementById('cX').value);
+      let cY_lar = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|BC|= "
+        + (Math.sqrt((cX_lar - bX_lar) ** 2 + (cY_lar - bY_lar) ** 2)).toFixed(2);
+    }
+
+    function AC_lar() {
+      let aX_lar = parseFloat(document.getElementById('aX').value);
+      let aY_lar = parseFloat(document.getElementById('aY').value);
+      let cX_lar = parseFloat(document.getElementById('cX').value);
+      let cY_lar = parseFloat(document.getElementById('cY').value);
+
+      document.getElementById("answer").innerHTML = "|AC|= "
+        + (Math.sqrt((aX_lar - cX_lar) ** 2 + (aY_lar - cY_lar) ** 2)).toFixed(2);
+    }
+
+  </script>
+  Podaj X punktu A: <input type="text" id="aX">
+  <br>
+  Podaj Y punktu A: <input type="text" id="aY">
+  <br>
+  <br>
+  <br>
+  Podaj X punktu B: <input type="text" id="bX">
+  <br>
+  Podaj Y punktu B: <input type="text" id="bY">
+  <br>
+  <br>
+  <br>
+  Podaj X punktu C: <input type="text" id="cX">
+  <br>
+  Podaj Y punktu C: <input type="text" id="cY">
+  <br>
+  <br>
+  <br>
+
+
+  <input type="button" value="Oblicz AB" onclick="AB_lar()">
+  <br>
+  <br>
+  <input type="button" value="Oblicz BC" onclick="BC_lar()">
+  <br>
+  <br>
+  <input type="button" value="Oblicz AC" onclick="AC_lar()">
+  <br>
+  <br>
+  <br>
+
+  <div style="color:red;font-size:50px;" id="answer"></div>
+</body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()">
+</html>
