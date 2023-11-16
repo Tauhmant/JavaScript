@@ -2,15 +2,32 @@
 <head>
 <title>Larin 2P</title>
 <style>
-h1{
+h1 {
   color: red;
   font-size: 100px;
- }
- .buttons{
+}
+
+.buttons{
     display: flex;
     justify-content: center;
     gap: 5px;
- }
+}
+
+ body {
+    background: linear-gradient(to top, #ff0000, #ff8000, #ffff00, #80ff00, #00ff80, #00ffff, #0080ff, #0000ff);
+    background-size: 100% 800%;
+    animation: gradientAnimation 10s linear infinite alternate; 
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 </style>
 <script language="JavaScript">
   function WinOpen_larin1() 
