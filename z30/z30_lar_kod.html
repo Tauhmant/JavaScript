@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <style>
+            textarea {
+                width: 90%;
+                height: 90%;
+                resize: none;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function okno_zamknij_larinkod() {
+                window.close()
+            }
+        </script>
+    </head>
+    <body bgcolor="silver">
+<textarea disabled readonly>
+    <html>
+        <head>
+        </style>
+        
+        <script type="text/javascript">
+        function okno_zamknij_larin() 
+        {
+        window.close()
+        }
+        
+        var Ciezarowka_wyswietl_larin = {
+            typ: 'Ciężarówka',
+            nazwa: 'Volvo HF 460',
+            marka: 'Volvo',
+            pokaz: function ()
+            {
+            document.write(this.typ + ' ' + this.nazwa)
+        }
+        }
+        Ciezarowka_wyswietl_larin.pokaz();
+        </script>
+        </head>
+        <body>
+        <br>
+        programowanie obiektowe
+        <br>
+        <input type="button" value="Zamknij okno" onclick="okno_zamknij_larin()">
+        </body>
+        </html>
+
+</textarea>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larinkod()"/>
+</body>
+</html>
