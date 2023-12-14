@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var a = parseFloat(prompt("podaj a"));
+var b = parseFloat(prompt("podaj b"));
+var c = parseFloat(prompt("podaj c"));
+
+if (a == 0)
+{
+    document.write("To nie jest rownanie kwadratowe");
+}
+else 
+{
+    var delta = b*b - 4*a*c;
+    var p_delta = Math.sqrt(delta);
+}
+
+if (delta > 0)
+{
+    var x1 = (-b - p_delta) / (2 * a);
+    var x2 = (-b + p_delta) / (2 * a);
+    document.write("x1 = " + x1 + "<br>x2 = " + x2);
+}
+else if (delta == 0)
+{
+    var x0 = -b / (2*a);
+    document.write("x0 = " + x0);
+}
+else
+{
+    document.write("Delta ujemna");
+}
+</script>
+</body>
+
+</html>
+    

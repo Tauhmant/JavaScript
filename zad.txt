@@ -1,0 +1,10 @@
+wczytac 3 liczby w okienka(a, b, c). Sa to wpolczynniki funkcji kwadratowej
+gdy by a =0 komunikat to nie jest funkjca kwadratowa, komputer nic nie oblicza. 
+Oblicz wierszcholek, podaj funkcje kwadratowa w postaci kanonicznej.
+Oblicz x1, x2 lub x0 lub  napisz Brak meijsc zerowych.
+Podaj jesli jest to mozliwe funkcje kwadratowa w postaci iloczynowej.
+Podaj przedzialy gdy funcke rosnie lub maleje.
+Wszystkie zmienne z 3 literami nazwiska.
+Unikaj zapisow +- np. x+-2
+Wypisuj czoinka 2 cm kolorem zielonym.
+na ocene calujaca narysujuklad spolrzedny i wykres funkcji (strona 132)
