@@ -1,39 +1,87 @@
 <html>
 <head>
+<title>Obliczenia funkcji kwadratowej</title>
 </head>
 <body>
+<div style="font-size:2cm; color:green;">
 <script type="text/javascript">
-var a = parseFloat(prompt("podaj a"));
-var b = parseFloat(prompt("podaj b"));
-var c = parseFloat(prompt("podaj c"));
+var a_lar = parseFloat(prompt("podaj a"));
+var b_lar = parseFloat(prompt("podaj b"));
+var c_lar = parseFloat(prompt("podaj c"));
+document.write("Wprowadzone dane: <br> a= " + a_lar + "<br> b= " + b_lar + "<br> c= " + c_lar + "<br>");
 
-if (a == 0)
+if (a_lar == 0)
 {
     document.write("To nie jest rownanie kwadratowe");
-}
-else 
-{
-    var delta = b*b - 4*a*c;
-    var p_delta = Math.sqrt(delta);
+    return;
 }
 
-if (delta > 0)
+var delta_lar = (b_lar*b_lar) - 4*a_lar*c_lar;
+var p_delta_lar = Math.sqrt(delta_lar);
+
+var fKanon_lar = "f(x) = " + a_lar + " * (x - " + delta_lar + ")^2 + " + p_delta_lar;
+document.write("Wierzchołek: (" + delta_lar + ", " + p_delta_lar + ")<br>");
+document.write("Funkcja kwadratowa w postaci kanonicznej: " + fKanon_lar + "<br>");
+
+function fRosn_lar(x) 
 {
-    var x1 = (-b - p_delta) / (2 * a);
-    var x2 = (-b + p_delta) / (2 * a);
-    document.write("x1 = " + x1 + "<br>x2 = " + x2);
+    return a_lar * (x * x) + b_lar * x + c_lar;
 }
-else if (delta == 0)
+
+function fMal_lar(x)
 {
-    var x0 = -b / (2*a);
-    document.write("x0 = " + x0);
+    return -a_lar * (x * x) + b_lar * x + c_lar;
+}
+
+if (delta_lar > 0)
+{
+    var x1_lar = (-b_lar - p_delta_lar) / (2 * a_lar);
+    var x2_lar = (-b_lar + p_delta_lar) / (2 * a_lar);
+    document.write("x1 = " + x1_lar + "<br>x2 = " + x2_lar);
+
+    var fRosn = a_lar * (x_lar * x_lar) + b * x + c;
+    document.write("Wartość funkcji rosnącej dla x=" + x1_lar.toFixed(2) + " , " + fRosn_lar(x1_lar).toFixed(2) + "<br>");
+    document.write("Wartość funkcji malejącej dla x=" + x2_lar.toFixed(2) + " , " + fMal_lar(x2_lar).toFixed(2) + "<br>");
+}
+else if (delta_lar == 0)
+{
+    var x0_lar = -b_lar / (2*a_lar);
+    document.write("x0 = " + x0_lar + "<br>");
 }
 else
 {
-    document.write("Delta ujemna");
+    document.write("Delta ujemna<br>");
 }
+
+if (a_lar !== 0 && delta_lar !== 0) {
+    document.write("Funkcja kwadratowa w postaci iloczynowej: f(x) = " + a_lar + " * (x - " + x1_lar + ") * (x - " + x2_lar + ")<br>");
+  }
+
+
+</script>
+</div>
+
+<canvas id="myCanvas" width="300" height="150"></canvas>
+
+<script language="JavaScript">
+
+  rysujParabole(a_lar, b_lar, c_lar);
+
+  function rysujParabole(a, b, c) {
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+    ctx.beginPath();
+    for (var i = 0; i <= canvas.width; i++) {
+      var x = (i - canvas.width / 2) / 10; 
+      var y = funkcjaRosnaca(x);
+      ctx.lineTo(i, canvas.height / 2 - y);
+    }
+
+    ctx.stroke();
+  }
 </script>
 </body>
-
 </html>
     
