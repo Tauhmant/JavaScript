@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+ var TaB_lar = new Array('Żubr', 'Pani Gilowa', 'DRINKTECH', 'Natural Detox', 'Ajka', 'Tłocznia Maurer', 'Kozel');
+ for (i = 0; i<TaB_lar.length; i++)
+ {
+ document.write(TaB_lar[i] + "<br>");
+ }
+ </script>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

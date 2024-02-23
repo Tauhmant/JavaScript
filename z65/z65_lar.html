@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+
+var elements = ["a", 5, "c", 2, "b", 1, 3];
+
+function sortElements(arr) {
+    document.write("Elementy tablicy: " + elements + "<br>");
+    var letters = [];
+    var numbers = [];
+
+    arr.forEach(function(item) {
+        if (typeof item === 'string') {
+            letters.push(item);
+        } else if (typeof item === 'number') {
+            numbers.push(item);
+        }
+    });
+
+    letters.sort();
+
+    var sortedArray = letters.concat(numbers);
+    
+    return sortedArray;
+}
+
+var sortedElements = sortElements(elements);
+
+document.write("<br>Posortowane Elementy Tablicy: " + sortedElements + "<br>");
+
+ </script>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

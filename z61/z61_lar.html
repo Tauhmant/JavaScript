@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie1</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+ var TT_lar = new Array(10).fill(0);
+
+ let petla = parseInt(prompt("Podaj liczbe: "));
+ for (i = 0; i < TT_lar.length && i<petla; i++) {
+    TT_lar[i] = 3*(i+1);
+ }
+ for( let i = 0; i < TT_lar.length; i++){
+    document.write("TT_lar[" +i+ "] =" +TT_lar[i]+ "<br>");
+ }
+ 
+ let ilo_lar = 1;
+ for(let i = 0; i < TT_lar.length && i<petla; i++){
+    ilo_lar *= TT_lar[i];
+ }
+
+ var srednia_lar=suma_lar/i;
+ document.write("Iloczyn liczb:"+ilo_lar+"<br>");
+ </script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>

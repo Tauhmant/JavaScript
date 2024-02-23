@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+ var Tablica_N = new Array('Anna', 'Adam', 'Piotr', 'Ewa', 'Paweł', 'Marcin', 'Ela');
+
+ Tablica_N.push('Daniel');
+ for (i = 0; i<Tablica_N.length; i++)
+ {
+ document.write(Tablica_N[i] + "<br>");
+ }
+
+ Tablica_N.shift();
+ document.write("<br>Usunięcie pierwszego elementu:<br>");
+ for (i = 0; i<Tablica_N.length; i++)
+ {
+ document.write(Tablica_N[i] + "<br>");
+ }
+
+ Tablica_N.reverse();
+ document.write("<br>Odwrócenie tablicy:<br>");
+ for (i = 0; i<Tablica_N.length; i++)
+ {
+ document.write(Tablica_N[i] + "<br>");
+ }
+ </script>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>

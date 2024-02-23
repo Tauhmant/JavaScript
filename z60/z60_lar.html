@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie1</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+ var suma_lar=0;
+ var T_lar = new Array()
+ for (i = 0; i < 20; i++) {
+ T_lar[i] = i;
+ suma_lar=suma_lar+i;
+ document.write("T["+i+"]="+T_lar[i]+"<br>");
+ }
+ var srednia_lar=suma_lar/i;
+ document.write("suma="+suma_lar+"<br>");
+ document.write("średnia="+srednia_lar.toFixed(2)+"<br>");
+ </script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>

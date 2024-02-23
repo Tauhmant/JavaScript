@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Informacje o przeglądarce</title>
+</head>
+<body>
+    <script type="text/javascript">
+function okno_zamknij_larin() 
+{
+  window.close();
+}
+        function wyswietlDate() {
+            var today = new Date();
+            var day = today.getDate();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear();
+            if (year <= 99) year += 1900;
+            return day + ":" + month + ":" + year;
+        }
+
+        document.write("Dzisiejsza data jest: " + wyswietlDate() + "<br>");
+
+        var agent = navigator.userAgent.toLowerCase();
+        var nazwa = "Nieznany";
+
+        if (agent.indexOf('firefox') != -1) {
+            nazwa = "Firefox";
+        } else if (agent.indexOf('opera') != -1) {
+            nazwa = "Opera";
+        } else if (agent.indexOf('konqueror') != -1) {
+            nazwa = "Konqueror";
+        } else if (agent.indexOf('netscape') != -1) {
+            nazwa = "Netscape Navigator";
+        } else if (agent.indexOf('msie') != -1) {
+            nazwa = "Internet Explorer";
+        }
+
+        document.write("Przeglądarka= " + nazwa + "<br>");
+
+        if (agent.indexOf('windows') != -1) {
+            nazwa = "Windows";
+        } else if (agent.indexOf('linux') != -1) {
+            nazwa = "Linux";
+        } else if (agent.indexOf('mac') != -1) {
+            nazwa = "MacOS";
+        }
+
+        document.write("Wersja Przeglądarki= 5.0 (" + nazwa + ")<br>");
+
+        var browserInfo = navigator.userAgent;
+        document.write("Wszystkie dane przeglądarki= " + browserInfo + "<br>");
+
+        var operatingSystem = navigator.platform;
+        document.write("System operacyjny= " + operatingSystem + "<br>");
+
+        var isOnline = navigator.onLine;
+        document.write("Tryb pracy przeglądarki= " + isOnline + "<br>");
+
+        var javaEnabled = navigator.javaEnabled();
+        document.write("Obsługa Java= " + javaEnabled + "<br>");
+    </script>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+
+</body>
+</html>

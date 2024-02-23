@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rozwiązanie układu równań</title>
+</head>
+<body>
+
+<h2>Wprowadź współczynniki równań:</h2>
+
+<div>
+    <input type="number" id="a1">
+    <label for="b1">* x +</label>
+    <input type="number" id="b1">
+    <label for="c1">* y =</label>
+    <input type="number" id="c1">
+</div>
+
+<div>
+    <input type="number" id="a2">
+    <label for="b2">* x +</label>
+    <input type="number" id="b2">
+    <label for="c2">* y =</label>
+    <input type="number" id="c2">
+</div>
+
+<button onclick="solveEquations()">Oblicz</button>
+
+<div id="solution"></div>
+
+<script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+function solveEquations() {
+    function increment(id) {
+    const input = document.getElementById(id);
+    input.value = parseFloat(input.value) + 1; 
+}
+
+function decrement(id) {
+    const input = document.getElementById(id);
+    input.value = parseFloat(input.value) - 1; 
+}
+    const a1 = parseFloat(document.getElementById('a1').value);
+    const b1 = parseFloat(document.getElementById('b1').value);
+    const c1 = parseFloat(document.getElementById('c1').value);
+
+    const a2 = parseFloat(document.getElementById('a2').value);
+    const b2 = parseFloat(document.getElementById('b2').value);
+    const c2 = parseFloat(document.getElementById('c2').value);
+
+    if (isNaN(a1) || isNaN(b1) || isNaN(c1) || isNaN(a2) || isNaN(b2) || isNaN(c2)) {
+        alert("Proszę wprowadzić wszystkie współczynniki.");
+        return;
+    }
+
+    const denominator = a1 * b2 - a2 * b1;
+    if (denominator === 0) {
+        document.getElementById('solution').textContent = "Układ równań jest sprzeczny lub nieskończony.";
+    } else {
+        const x = (c1 * b2 - c2 * b1) / denominator;
+        const y = (a1 * c2 - a2 * c1) / denominator;
+        document.getElementById('solution').textContent = "X = " + x + ", Y = " + y;
+    }
+}
+</script>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>

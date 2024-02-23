@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+function porownaj(a,b)
+{
+return a - b
+}
+var Tablica = new Array(27, 100, 10, 450, 1654, 320);
+document.write('Bez sortowania: <br>' + Tablica.join() + "<br>" );
+document.write('Sortowanie domyślne:  <br>');
+Tablica.sort()
+document.write(Tablica.join());
+document.write('<br>Sortowanie poprawne: <br>');
+Tablica.sort(porownaj)
+document.write(Tablica.join() );
+
+ </script>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obrazki w tabeli</title>
+</head>
+<body>
+
+<table id="myTable">
+  <tr>
+    <td><img src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg" alt="obrazek1"></td>
+    <td><img src="https://img.freepik.com/premium-vector/web-development-programming-code-testing-ui-concept-with-laptop-displaying-futuristic-code_375605-307.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707782400&semt=ais" alt="Obrazek 2"></td>
+    <td><img src="https://www.biztechcs.com/wp-content/uploads/2021/07/OG-12-Best-Programming-Languages-for-Web-App-Development-jpg-webp.webp" alt="Obrazek 3"></td>
+  </tr>
+  <tr>
+    <td><img src="https://www.mooc.org/hubfs/web-programming-languages.jpg?w=144" alt="Obrazek 4"></td>
+    <td><img src="https://orange-plan.net/wp-content/uploads/2023/04/top11.png" alt="Obrazek 5"></td>
+    <td><img src="https://assets.telegraphindia.com/telegraph/2022/May/1652783513_web-d.jpg" alt="Obrazek 6"></td>
+  </tr>
+  <tr>
+    <td><img src="https://cdn.sanity.io/images/tlr8oxjg/production/d2f16531bde974464ad7ab74dc335790dbdebffa-1192x668.png?w=3840&q=80&fit=clip&auto=format" alt="Obrazek 7"></td>
+    <td><img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="Obrazek 8"></td>
+    <td><img src="https://www.mooc.org/hubfs/applications-of-computer-programming.jpg" alt="Obrazek 9"></td>
+  </tr>
+</table>
+
+<script>
+  function okno_zamknij_larin() 
+{
+window.close()
+}
+
+var obrazki = [
+  "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg",
+  "https://img.freepik.com/premium-vector/web-development-programming-code-testing-ui-concept-with-laptop-displaying-futuristic-code_375605-307.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707782400&semt=ais",
+  "https://www.biztechcs.com/wp-content/uploads/2021/07/OG-12-Best-Programming-Languages-for-Web-App-Development-jpg-webp.webp",
+  "https://www.mooc.org/hubfs/web-programming-languages.jpg?w=144",
+  "https://orange-plan.net/wp-content/uploads/2023/04/top11.png",
+  "https://assets.telegraphindia.com/telegraph/2022/May/1652783513_web-d.jpg",
+  "https://cdn.sanity.io/images/tlr8oxjg/production/d2f16531bde974464ad7ab74dc335790dbdebffa-1192x668.png?w=3840&q=80&fit=clip&auto=format",
+  "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg",
+  "https://www.mooc.org/hubfs/applications-of-computer-programming.jpg"
+];
+var index = 0;
+
+function zmienObrazki() {
+  var komorki = document.querySelectorAll('#myTable img');
+  for (var i = 0; i < komorki.length; i++) {
+    komorki[i].src = obrazki[index];
+  }
+  index = (index + 1) % obrazki.length;
+}
+
+setInterval(zmienObrazki, 2000);
+</script>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>
