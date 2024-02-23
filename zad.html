@@ -4,46 +4,50 @@
 </head>
 <body>
 <div style="font-size:2cm; color:green;">
-<script type="text/javascript">
+
+<script language="JavaScript">
 var a_lar = parseFloat(prompt("podaj a"));
 var b_lar = parseFloat(prompt("podaj b"));
 var c_lar = parseFloat(prompt("podaj c"));
-document.write("Wprowadzone dane: <br> a= " + a_lar + "<br> b= " + b_lar + "<br> c= " + c_lar + "<br>");
+document.write("Dane: <br>a = " + a_lar + "<br>b = " + b_lar + "<br>c = " + c_lar + "<br>");
 
-if (a_lar == 0)
+if (a_lar === 0)
 {
     document.write("To nie jest rownanie kwadratowe");
-    return;
+    process.exit(0);
 }
 
 var delta_lar = (b_lar*b_lar) - 4*a_lar*c_lar;
 var p_delta_lar = Math.sqrt(delta_lar);
-
+var q_lar = -b_lar / (2*a_lar);
+var p_lar = -delta_lar / (4*a_lar)
 var fKanon_lar = "f(x) = " + a_lar + " * (x - " + delta_lar + ")^2 + " + p_delta_lar;
-document.write("Wierzchołek: (" + delta_lar + ", " + p_delta_lar + ")<br>");
-document.write("Funkcja kwadratowa w postaci kanonicznej: " + fKanon_lar + "<br>");
 
 function fRosn_lar(x) 
 {
-    return a_lar * (x * x) + b_lar * x + c_lar;
+    return a_lar * (x * x) + (b_lar * x) + c_lar;
 }
 
 function fMal_lar(x)
 {
-    return -a_lar * (x * x) + b_lar * x + c_lar;
+    return -a_lar * (x * x) + (b_lar * x) + c_lar;
+}
+
+function funkcja_lar(x)
+{
+    return -b_lar / (2*a_lar);
 }
 
 if (delta_lar > 0)
 {
     var x1_lar = (-b_lar - p_delta_lar) / (2 * a_lar);
     var x2_lar = (-b_lar + p_delta_lar) / (2 * a_lar);
-    document.write("x1 = " + x1_lar + "<br>x2 = " + x2_lar);
-
-    var fRosn = a_lar * (x_lar * x_lar) + b * x + c;
-    document.write("Wartość funkcji rosnącej dla x=" + x1_lar.toFixed(2) + " , " + fRosn_lar(x1_lar).toFixed(2) + "<br>");
-    document.write("Wartość funkcji malejącej dla x=" + x2_lar.toFixed(2) + " , " + fMal_lar(x2_lar).toFixed(2) + "<br>");
+    document.write("x1 = " + x1_lar + "<br>x2 = " + x2_lar + "<br>");
+    document.write("Wartość funkcji rosnącej dla x= " + funkcja_lar(x1_lar).toFixed(2) + ", +∞<br>");
+    document.write("Wartość funkcji malejącej dla x= -∞, " + funkcja_lar(x2_lar).toFixed(2) + "<br>");
+    document.write("Funkcja kwadratowa w postaci iloczynowej: f(x) = " + a_lar + " * (x - " + x1_lar + ") * (x - " + x2_lar + ")<br>");
 }
-else if (delta_lar == 0)
+else if (delta_lar === 0)
 {
     var x0_lar = -b_lar / (2*a_lar);
     document.write("x0 = " + x0_lar + "<br>");
@@ -51,37 +55,37 @@ else if (delta_lar == 0)
 else
 {
     document.write("Delta ujemna<br>");
+    process.exit(0);
 }
 
-if (a_lar !== 0 && delta_lar !== 0) {
-    document.write("Funkcja kwadratowa w postaci iloczynowej: f(x) = " + a_lar + " * (x - " + x1_lar + ") * (x - " + x2_lar + ")<br>");
-  }
-
+document.write("Wierzchołek: (" + q_lar + ", " + p_lar + ")<br>");
+document.write("Funkcja kwadratowa w postaci kanonicznej: " + fKanon_lar + "<br>");
 
 </script>
 </div>
 
-<canvas id="myCanvas" width="300" height="150"></canvas>
+<canvas id="myCanvas" width="500" height="500"></canvas>
 
 <script language="JavaScript">
 
-  rysujParabole(a_lar, b_lar, c_lar);
+rysujParabole(a_lar, b_lar, c_lar);
+function rysujParabole(a, b, c) 
+    {
+      var canvas = document.getElementById('myCanvas');
+      var parabola = canvas.getContext('2d');
+      parabola.clearRect(0, 0, canvas.width, canvas.height);
 
-  function rysujParabole(a, b, c) {
-    var canvas = document.getElementById('myCanvas');
-    var ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height); 
 
-    ctx.beginPath();
-    for (var i = 0; i <= canvas.width; i++) {
-      var x = (i - canvas.width / 2) / 10; 
-      var y = funkcjaRosnaca(x);
-      ctx.lineTo(i, canvas.height / 2 - y);
+      parabola.beginPath();
+      for (var i = 0; i <= canvas.width; i++) {
+        var x = (i - canvas.width / 2) / 10; 
+        var y = fRosn_lar(x);
+        parabola.lineTo(i, canvas.height / 2 - y);
+      }
+      parabola.strokeStyle = 'green';
+      parabola.stroke();
     }
 
-    ctx.stroke();
-  }
 </script>
 </body>
 </html>
-    
