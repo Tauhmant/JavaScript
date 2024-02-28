@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+function stronaCKE() {
+  setTimeout(function() {
+    window.location = "https://www.cke.gov.pl/";
+  }, 4000);
+}
+
+function stronaGdanska() {
+  setTimeout(function() {
+    window.location = "https://gdansk.pl/";
+  }, 6000);
+}
+
+function stronaUcznia() {
+    setTimeout(function() {
+    window.location = "http://zse.gda.pl/~ar/";
+  }, 6000);
+}
+
+function odswiezStrone() {
+  setTimeout(function() {
+    window.location.reload();
+  }, 8000);
+}
+</script>
+</head>
+<body>
+<form>
+  <input type="button" value="Strona CKE" onclick="stronaCKE()">
+  <input type="button" value="Strona Gdańska" onclick="stronaGdanska()">
+  <input type="button" value="Strona Ucznia" onclick="stronaUcznia()">
+  <input type="button" value="Odśwież stronę" onclick="odswiezStrone()">
+</form>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

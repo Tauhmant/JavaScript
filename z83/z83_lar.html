@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie 82 - Model DOM</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #schemat {
+      display: flex;
+      justify-content: center;
+    }
+    .poziom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+    .poziom:before {
+      content: '';
+      flex-grow: 1;
+      border-top: 2px solid black;
+      width: 50px;
+    }
+    .poziom:first-child:before {
+      display: none;
+    }
+    .obiekt {
+      border: 2px solid black;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    function okno_zamknij_larin() 
+{
+window.close()
+}
+    </script>
+<div id="schemat">
+  <div class="poziom">
+    <div class="obiekt">WINDOW</div>
+    <div class="obiekt">HISTORY</div>
+    <div class="obiekt">LOCATION</div>
+  </div>
+  <div class="poziom">
+    <div class="obiekt">DOCUMENT</div>
+    <div class="obiekt">LINKS[]</div>
+    <div class="obiekt">ANCHORS[]</div>
+    <div class="obiekt">IMAGES[]</div>
+    <div class="obiekt">FORMS</div>
+    <div class="obiekt">ELEMENTY FORMULARZA</div>
+  </div>
+  <div class="poziom">
+    <div class="obiekt">OBIEKTY DOM LEVEL 1</div>
+  </div>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

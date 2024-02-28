@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+<script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+</script>
+<h1>Opisz teorię dotyczącą Obiekt location</h1>
+<p>Obiekt ten zawiera informacje o bieżącym adresie URL. Jego właściwości odpowiadają kolejnym
+    członom adresu.
+    Ogólna postać lokalizatora URL to:
+    protocol://host:port/path#fragment?query</p>
+    <h1>Właściwości obiektu location</h1>
+    <p>protocol ➡️ to łańcuch znakowy określający protokół, zgodnie z którym
+    należy nawiązać łączność z podanym serwerem (np. http:, ftp:, file:),</p>
+    <p>host ➡️ to łańcuch znakowy określający nazwę serwera z bieżącego adresu, port
+    to łańcuch znakowy odpowiadający portowi, przez który należy połączyć się z serwerem </p>
+    <p>pathname ➡️ to łańcuch znakowy określający ścieżkę dostępu do dokumentu na serwerze</p>
+    <p>hash ➡️ to łańcuch znakowy odpowiadający nazwie zakotwiczenia (przypisanie tu jakiejś wartości spowoduje przewinięcie dokumentu do wskazanego punktu)</p>
+    <p>serach ➡️ to człon lokalizatora URL.</p>
+    <h1>Właściwość obiektu location w formie tabeli</h1>
+    <table>
+        <tr>
+          <th>Nazwa</th>
+          <th>Znaczenie</th>
+          <th>Hash</th>
+          <th>Dostępność</th>
+        </tr>
+        <tr>
+          <td>Host</td>
+          <td>Część adresu URL zawierająca nazwę hosta oraz numer portu.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>Host</td>
+        </tr>
+        <tr>
+          <td>hostname</td>
+          <td>Część adresu URL zawierająca nazwę hosta.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>hostname</td>
+        </tr>
+        <tr>
+          <td>Href</td>
+          <td>Pełny adres URL.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>Href</td>
+        </tr>
+        <tr>
+          <td>pathname</td>
+          <td>Część adresu URL zawierająca ścieżkę dostępu i nazwę pliku.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>pathname</td>
+        </tr>
+        <tr>
+          <td>Port</td>
+          <td>Część adresu URL zawierająca numer portu.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>Port</td>
+        </tr>
+        <tr>
+          <td>protocol</td>
+          <td>Część adresu URL zawierająca nazwę protokołu (np. http, ftp).</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>protocol</td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td>Część adresu URL znajdująca się za znakiem zapytania.</td>
+          <td>FF, IE3, NN2, OP7</td>
+          <td>Search</td>
+        </tr>
+      </table>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

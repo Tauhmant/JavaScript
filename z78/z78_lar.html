@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+function okno_zamknij_larin() 
+{
+window.close()
+}
+</script>
+<h1>Obiekt history</h1>
+<ol>
+    <li>Zawiera historię stron odwiedzanych w bieżącej sesji</li>
+    <li> Posiada dwie właściwości:</li>
+</ol>
+
+<ul>
+<li>current ➡️ zawiera bieżący lokalizator URL</li>
+<li>length ➡️ zawiera długość listy historii</li>
+</ul>
+
+<h1>window.history ➡️ wszystkie możliwości</h1>
+
+<ul>
+    <li>window.history.length  ➡️  możesz sprawdzić ile stron odwiedził użytkownik zanim wszedł na
+        Twoją, ze względów bezpieczeństwa nie da się jednak pobrać ich adresów. </li>
+    <li>window.history.forward()  ➡️  Działa to jak przyciski "w przód" w przeglądarce.</li>
+    <li>window.history.back()  ➡️  Działa to jak przyciski "w tył" w przeglądarce. </li>
+    <li>window.history.go(n)  ➡️  pozwala przejść o kilka stron do przodu lub do tyłu naraz. </li>
+    <li>window.history.go(-2);  ➡️  przejdzie dwie strony wstecz</li>
+    <li>window.history.go(0);  ➡️  odświeży aktualną stronę </li>
+    
+    </ul>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

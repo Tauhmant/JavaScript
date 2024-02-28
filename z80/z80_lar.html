@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadanie teoretyczne na przyszły rok screen, close, windowo itp</title>
+</head>
+<body>
+<script>
+function okno_zamknij_larin() {
+    window.close();
+}
+</script>
+
+<h1>Zadanie teoretyczne na przyszły rok screen, close, windowo itp</h1>
+
+<h2>Obiekt screen</h2>
+<p>window.screen</p>
+
+<h2>window.screen.colorDepth -&gt;</h2>
+<p>Odpowiada za głębię kolorów.</p>
+
+<h2>window.screen.width -&gt;</h2>
+<p>Szerokość ekranu.</p>
+
+<h2>window.screen.height -&gt;</h2>
+<p>Wysokość ekranu.</p>
+
+<h2>window.screen.availWidth -&gt;</h2>
+<p>Tylko dostępna szerokość ekranu, to znaczy odejmuje wszelkie systemowe paski menu.</p>
+
+<h2>Metoda .open()</h2>
+<p>window.open() - Metoda, która pozwala na otworzenie nowego okna.</p>
+<p>Jej parametrami są:</p>
+<ul>
+  <li>URL – adres strony, która ma zostać załadowana w nowym oknie,</li>
+  <li>name – określa sposób otwarcia nowego okna,</li>
+  <li>specs – lista wartości rozdzielonych przecinkami, które dotyczą takich właściwości okna jak możliwość zmiany rozmiaru, wysokość, szerokość, …,</li>
+  <li>replace – parametr, który mówi czy nowe okno ma dodać nowy wpis do historii przeglądarki czy zastąpić aktualny.</li>
+</ul>
+
+<h2>Metoda .close()</h2>
+<p>window.close() - Służy do zamknięcia aktualnego okna.</p>
+
+<h2>Metody window.moveTo(), window.moveBy(), window.resizeTo()</h2>
+<p>window.moveTo() i window.moveBy() - Metody służą do zmiany położenia okna przeglądarki na pulpicie. Przyjmują parametry określające pozycję w poziomie i pionie.</p>
+<p>window.resizeTo() - Trzecia metoda zmienia rozmiar okna przeglądarki. Przyjmuje nową szerokość i wysokość.</p>
+
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>
