@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+var a_lar = (8 % 4) + 5;
+var b_lar = (7 % 6) + 20;
+
+document.write("a = " + a_lar + "<br>");
+document.write("b = " + b_lar + "<br><br>");
+for (var i = 0; i < a_lar; i++) {
+    var row = '';
+    for (var j = 0; j < b_lar; j++) {
+        if (i === 0 || i === a_lar - 1) {
+            row += '*';
+        } else {
+            if (j === 0 || j === b_lar - 1) {
+                row += '*';
+            } else {
+                row += '&nbsp;&nbsp;';
+            }
+        }
+    }
+	document.write(row + "<br>");
+}
+
+</script>
+</body>
+</html>
