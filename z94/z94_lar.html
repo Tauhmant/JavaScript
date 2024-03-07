@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wyświetlanie daty i czasu po polsku</title>
+  <script>
+    function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+    function wyswietlDateCzas() {
+      var miesiace = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
+      var dniTygodnia = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
+
+      var currentDate = new Date();
+
+      var dzien = currentDate.getDate();
+      var miesiac = currentDate.getMonth();
+      var rok = currentDate.getFullYear();
+      var godzina = currentDate.getHours();
+      var minuta = currentDate.getMinutes();
+      var sekunda = currentDate.getSeconds();
+      var dzienTygodnia = currentDate.getDay();
+
+      var formattedDate = dzien + ' ' + miesiace[miesiac] + ' ' + rok;
+      var formattedTime = godzina + ':' + (minuta < 10 ? '0' + minuta : minuta) + ':' + (sekunda < 10 ? '0' + sekunda : sekunda);
+      var formattedDayOfWeek = dniTygodnia[dzienTygodnia];
+
+      document.getElementById("czas").innerText = "Dzisiaj jest " + formattedDayOfWeek + ", " + formattedDate + " r., godzina " + formattedTime;
+    }
+  </script>
+</head>
+<body onload="wyswietlDateCzas()">
+  <div id="czas"></div>
+
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

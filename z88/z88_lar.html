@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona z hasłem</title>
+  <script>
+    function okno_zamknij_larin() 
+{
+window.close()
+}
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      if (password === "23072006") { 
+        window.location.href = "https://www.youtube.com/watch?v=GWMWdLXnM1c"; // Tutaj wpisz adres strony, do której chcesz przekierować użytkownika
+      } else {
+        alert("Nieprawidłowe hasło, spróbuj ponownie."); 
+        document.getElementById("password").value = ""; 
+      }
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <label for="password">Wpisz hasło dostępu do strony:</label>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">OK</button>
+  </div>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

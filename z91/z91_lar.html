@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language='JavaScript' type='text/JavaScript'>
+  function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+function weryfikacja_hasla()
+{
+  var prob = 1;
+  var haslo = prompt('Podaj hasło','');
+  if (haslo != null)
+  {
+    while (prob < 3)
+    {
+      if (!haslo) history.go(-1);
+      if (haslo.toLowerCase() == 'youtube') 
+      {
+        alert('Hasło OK!');
+        window.open('https://youtube.com','_top');
+        break;
+      }
+      prob+=1;
+      var haslo = prompt('Złe hasło. Spróbuj ponownie','Hasło');
+    }
+  }
+  if (haslo !=null) {
+    if (haslo.toLowerCase()!='Hasło' && prob == 3) history.go(-1);
+    return ' ';
+  }
+}
+</script>
+</head>
+<body>
+<button onclick="weryfikacja_hasla()">Sprawdź hasło (gdzie ogladasz filmy)</button>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+
+</body>
+</html>

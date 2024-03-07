@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+  
+  var currentDate = new Date();
+  
+  // Metoda getMonth() - zwraca numer miesiąca (0-11)
+  var month = currentDate.getMonth();
+  console.log("Aktualny miesiąc:", month);
+  
+  // Metoda getDay() - zwraca dzień tygodnia (0-6)
+  var day = currentDate.getDay();
+  console.log("Aktualny dzień tygodnia:", day);
+  
+ </textarea>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>

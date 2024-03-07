@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_larin() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+
+   var array = [1, 2, 3, 4, 5];
+   
+
+   console.log("Długość tablicy:", array.length);
+   
+   // Metoda concat() - łączenie tablic
+   var array2 = [6, 7, 8];
+   var newArray = array.concat(array2);
+   console.log("Połączone tablice:", newArray);
+   
+   // Metoda pop() - usuwanie ostatniego elementu
+   var poppedElement = array.pop();
+   console.log("Usunięty element:", poppedElement);
+   console.log("Tablica po usunięciu:", array);
+   
+   // Metoda push() - dodawanie nowego elementu na koniec tablicy
+   array.push(6);
+   console.log("Tablica po dodaniu elementu:", array);
+   
+ </textarea>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_larin()"/>
+</body>
+</html>
