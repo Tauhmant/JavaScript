@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ivan Larin</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1c2936;
+        color: #333;
+      }
+
+      #container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+      .form-field {
+        margin-bottom: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #nameforpole {
+        position: absolute;
+        right: 200px;
+        top: 23px;
+      }
+      #typeselect {
+        position: absolute;
+        right: 120px;
+        top: 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm">
+      <div id="container">
+        <button type="button" id="addFieldBtn">Dodaj pole</button>
+        <input type="text" id="nameforpole" name="nameforpole" size="10" />
+        <select id="typeselect" name="typeselect">
+          <option value="text">Text</option>
+          <option value="number">Number</option>
+          <option value="email">Email</option>
+          <option value="date">Date</option>
+        </select>
+        <div class="form-field">
+          <label for="field1">Pole 1:</label>
+          <input type="text" id="field1" name="field1" />
+        </div>
+      </div>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const addFieldBtn = document.getElementById("addFieldBtn");
+        const formFieldsContainer = document.getElementById("container");
+        let fieldCount = 1;
+
+        addFieldBtn.addEventListener("click", function () {
+          fieldCount++;
+          const newField = document.createElement("div");
+          const PoleName = document.getElementById("nameforpole").value;
+          const TypePole = document.getElementById("typeselect").value;
+          let fieldName = PoleName !== "" ? PoleName : `Pole ${fieldCount}`;
+          newField.classList.add("form-field");
+          newField.innerHTML = `
+        <label for="field${fieldCount}">${fieldName}:</label>
+        <input type="${TypePole}" id="field${fieldCount}" name="field${fieldCount}">
+    `;
+          formFieldsContainer.appendChild(newField);
+        });
+      });
+    </script>
+  </body>
+</html>
